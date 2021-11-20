@@ -1,0 +1,59 @@
+<form>
+    <div class="form-group">
+        <label>Airline Name</label> <input type="text"
+            class="form-control" id="airlineName" name="airlineName"
+            placeholder="Enter Airline Name" [(ngModel)]="flight.airlineName" required>
+    </div>
+    <div class="form-group">
+        <label>Flight Name</label> <input type="text"
+            class="form-control" id="flName" name="flName"
+            placeholder="Enter Flight Name" [(ngModel)]="flight.flName">
+    </div>
+    <div class="form-group">
+        <label>Flight Id</label> <input type="number"
+            class="form-control" id="flId" name="flId"
+            placeholder="Enter Flight Id" [(ngModel)]="flight.flId">
+    </div>
+    <div class="form-group">
+        <label>Flight Date</label> <input type="text"
+            class="form-control" id="flDate" name="flDate"
+            placeholder="Enter Flight Date" [(ngModel)]="flight.flDate">
+    </div>
+    <div class="form-group">
+        <label>Source Destination</label> <input type="text"
+            class="form-control" id="startDes" name="startDes"
+            placeholder="Enter Source" [(ngModel)]="flight.startDes">
+    </div>
+    <div class="form-group">
+        <label>End Destination</label> <input type="text"
+            class="form-control" id="endDes" name="endDes"
+            placeholder="Enter End Destination" [(ngModel)]="flight.endDes">
+    </div>
+    <div class="form-group">
+        <label>Source Time</label> <input type="text"
+            class="form-control" id="srcTime" name="srcTime"
+            placeholder="Enter Source Time" [(ngModel)]="flight.srcTime">
+    </div>
+    <div class="form-group">
+        <label>Destination Time</label> <input type="text"
+            class="form-control" id="desTime" name="desTime"
+            placeholder="Enter Destination Time" [(ngModel)]="flight.desTime">
+    </div>
+    <div class="form-group">
+        <label>Total Seats</label> <input type="number"
+            class="form-control" id="totalSeat" name="totalSeat"
+            placeholder="Enter Total Seats" [(ngModel)]="flight.totalSeat">
+    </div>
+    <div class="form-group">
+        <label>Enter Economy Class Cost</label> <input type="number"
+            class="form-control" id="economyClassCost" name="economyClassCost"
+            placeholder="Enter Economy Class Cost" [(ngModel)]="flight.classPrice.economyClassCost">
+    </div>
+    <div class="form-group">
+        <label>Enter Business Class Cost</label> <input type="number"
+            class="form-control" id="businessClassCost" name="businessClassCost"
+            placeholder="Enter Business Class Cost" [(ngModel)]="flight.classPrice.businessClassCost">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addFlightByAdmin()">Add Flight</button>
+</form>
+<router-outlet></router-outlet>

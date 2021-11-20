@@ -1,0 +1,113 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary ">
+ 
+   
+
+  
+  <button
+  class="navbar-toggler"
+  type="button"
+  data-mdb-toggle="collapse"
+  data-mdb-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+>
+</button> 
+<div class="container-fluid">
+    <h1>ARS &nbsp;&nbsp;&nbsp;</h1>
+   
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/home"
+            routerLinkActive="active"
+            style="color: white"
+            style="font-size:20px"><b>HOME</b></a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/allflightdetails"
+            routerLinkActive="active"
+            style="font-size:20px"><b>FLIGHTS</b></a
+          >
+        </li>
+        
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/services"
+            routerLinkActive="active"
+            style="font-size:20px"><b>SERVICES</b></a
+          >
+        </li>
+      
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/aboutus"
+            routerLinkActive="active"
+            style="font-size:20px"><b>ABOUTUS</b></a
+          >
+        </li>
+        
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/contactus"
+            routerLinkActive="active"
+            style="font-size:20px"><b>CONTACT&nbsp;US</b></a
+          >
+        </li>
+
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        
+                  
+        <div ngbDropdown class="d-inline-block">
+          <img   ngbDropdownToggle
+                      src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg"
+                      class="rounded-circle"
+                      height="22"
+                      alt=""
+                      loading="lazy"
+                    />
+                      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button ngbDropdownItem routerLink="/profile"
+                        routerLinkActive="active">Profile</button>
+                        <button ngbDropdownItem (click)="deleteProfile()">Delete Profile</button>
+                        <button ngbDropdownItem (click)="logout()">Logout</button>
+                      </div>
+                    </div>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <div *ngIf="this.emailId==='no'|| this.emailId==null;then thenBlock"></div>
+                    <ng-template #thenBlock>
+                    <a 
+                    class="nav-link active"
+                    aria-current="page"
+                    routerLink="/login"
+                    routerLinkActive="active"
+                    style="color: purple;">LOGIN</a></ng-template>
+        
+      </ul>
+      
+
+
+
+</div>
+  </div>
+   
+  
+</nav>
+
+        
+<router-outlet></router-outlet>

@@ -1,0 +1,71 @@
+
+
+<div class="content" role="main">
+
+  <!-- Highlight Card -->
+  <div class="card highlight-card card-small">
+    <!-- content removed -->
+  </div>
+  
+</div>
+
+<div class="container"  role="main">
+  <div class="title">
+    <h1>Flight Scheduler</h1>
+  </div>
+  <div class="table-responsive rounded bg-light p-4 my-4">
+    <div class="mb-2">
+      <p class="font-weight-bold">Active Flight Schedule</p>
+    </div>
+    <table class="table table-hover">
+      <thead class="table-borderless table-secondary">
+        
+        <tr>
+       
+          <th scope="col">flDate</th>  
+          <th scope="col">AirlineName</th>  
+         
+          <th scope="col">flName</th>
+          <th scope="col">Source</th>
+          <th scope="col">Destination</th>
+          <th scope="col">Source Time</th>
+          <th scope="col">Destination Time</th>
+          <th scope="col">Total Seats</th>
+          <th scope="col">Total Booked Seats</th>
+          <th scope="col">Available Seats</th>
+          <th scope="col">EconomyClass</th>
+          <th scope="col">businessClassPrice</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+        <tr *ngFor="let flight of flightData">
+         
+          <td scope="row" style="width: 150px;">{{flight.flDate}}</td>
+          <td style="width: 100px;">{{flight.airlineName}}</td>
+        
+          <td style="width: 100px;">{{flight.flName}}</td>
+          <td style="width: 100px;">{{flight.startDes}}</td>
+          <td style="width: 150px;">{{flight.endDes}}</td>
+          <td>{{flight.srcTime}}</td>
+          <td>{{flight.desTime}}</td>
+          <td>{{flight.totalSeat}}</td>
+          <td>{{flight.totalBookedSeat}}</td>
+          <td>{{flight.totalAvailableSeat}}</td>
+          <td>{{flight.classPrice.economyClassCost}}</td>
+          <td>{{flight.classPrice.businessClassCost}}</td>
+        
+          <td >
+         <!-- <a href="/edit/{{flight.id}}" type="button" class="btn btn-success btn-sm text-white mr-2">Edit</a>-->
+            <button routerLink="/booking/{{flight.flId}}/{{flight.classPrice.economyClassCost}}/{{flight.classPrice.businessClassCost}}"
+            routerLinkActive="active"  type="button" class="btn btn-danger btn-sm">Book flight</button>
+          </td>
+        </tr>  
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

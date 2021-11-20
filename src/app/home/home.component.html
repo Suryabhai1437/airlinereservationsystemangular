@@ -1,0 +1,61 @@
+ <!-- Full Page Intro -->
+ <div class="view" style="background-image: url('https://images7.alphacoders.com/560/560556.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- Mask & flexbox options-->
+ <br><br>
+      <!-- Content -->
+      <div class="container">
+        <!--Grid row-->
+        
+        <div class="row mt-5">
+          <!--Grid column-->
+          <br> <br> <br> 
+          <div class="col-md-6 col-xl-5 mb-4">
+            <!--Form-->
+            <br> <br> <br>
+            <div class="card wow fadeInRight" data-wow-delay="0.3s">
+              <div class="card-body">
+                <!--Header-->
+                <div class="text-center">
+                  <h3 class="white-text">
+                    <i class="fas white-text"></i><b> Search Flight</b></h3>
+                  <hr class="hr-light">
+                </div>
+                <!--Body-->
+                <div class="md-form">
+                    <label for="form3" class="active" style="color:black" >From</label>
+                  <i class="fas prefix white-text active"></i>
+                  <input type="text" id="form3" class="white-text form-control" required placeholder="From" [(ngModel)]="this.startDes" name="startDes">
+                  
+                </div>
+                <div class="md-form">
+                    <label for="form2" class="active" style="color:black" >To</label>
+                  <i class="fas  prefix white-text active"></i>
+                  <input type="text" id="form2" class="white-text form-control" required placeholder="To" [(ngModel)]="this.endDes" name="endDes">
+                  
+                </div>
+                
+                <div class="text-center mt-4">
+                  <button class="btn btn-secondary"
+                  routerLink="/flightdetails/{{this.startDes}}/{{this.endDes}}"
+                  routerLinkActive="active"><b>Find Flight</b></button>
+                  <hr class="hr-light mb-3 mt-4">
+                  
+                </div>
+              
+            </div>
+            <!--/.Form-->
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Content -->
+    </div>
+    <br>  <br> <br> 
+    <!-- Mask & flexbox options-->
+  </div>
+  <!-- Full Page Intro -->
+
+<!-- Main navigation -->
+
+    

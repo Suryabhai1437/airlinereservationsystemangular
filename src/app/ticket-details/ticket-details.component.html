@@ -1,0 +1,21 @@
+<div class="card text-center">
+    <div class="card-header">
+     <h2>Ticket Details</h2>
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">Personal Details</h3>
+      <div style="font-size:20px;font-family:'Times New Roman'">FirstName:{{this.ticket.name.firstName}}&nbsp;&nbsp;&nbsp;LastName:{{this.ticket.name.lastName}}</div>
+      <div style="font-size:20px;font-family:'Times New Roman'">AadharId:{{this.ticket.aadharId}} &nbsp;&nbsp;&nbsp; Passport No:{{this.ticket.passportNo}}&nbsp;&nbsp; Address:{{this.ticket.address}}
+      </div>
+      <h3 class="card-title">Booking Details</h3>
+      <pre class="card-text" style="font-size:20px;font-family:'Times New Roman';">
+        FlightName:{{this.ticket.flight.flName}}&nbsp;&nbsp;&nbsp; AirlineName:{{this.ticket.flight.airlineName}}
+        Source Time:{{this.ticket.flight.srcTime}} &nbsp;&nbsp;&nbsp; Destination Time:{{this.ticket.flight.desTime}} &nbsp;&nbsp;&nbsp;FightDate:{{this.ticket.flight.flDate}}
+        From:{{this.ticket.flight.startDes}} &nbsp;&nbsp;&nbsp; To:{{this.ticket.flight.endDes}}
+        Seat No:{{this.ticket.seatNo}} &nbsp;&nbsp;&nbsp;TicketPrice:{{this.ticket.ticketPrice}}
+      </pre>
+      <a class="btn btn-primary" (click)="onClick()">Ok</a>
+    </div>
+   
+  </div>
+  

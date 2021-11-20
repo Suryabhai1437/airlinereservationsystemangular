@@ -1,0 +1,40 @@
+@import url('https://fonts.google.com/specimen/Roboto+Slab?query=roboto+slab');
+
+body {
+    background: white;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.card {
+    border: none;
+    border-radius: 0;
+    width: 550px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
+}
+
+.text-muted {
+    font-weight: 500 !important;
+    font-size: 12px;
+    color: #6c757dcc !important
+}
+
+h2 {
+    color: #028282;
+    padding: 10px 0 20px;
+    font-family: Roboto Slab !important;
+    font-weight: bold
+}
+
+.form-group {
+    margin-top: 20px
+}
+.background{
+    /* The image used */
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
