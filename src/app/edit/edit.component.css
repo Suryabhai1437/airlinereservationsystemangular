@@ -1,0 +1,11 @@
+.container
+{
+    margin:auto;
+	margin-top:100px;
+	padding-top:35px;
+	padding-right:40px;
+	padding-left:40px;
+	width:470px;
+	height:460px;
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}

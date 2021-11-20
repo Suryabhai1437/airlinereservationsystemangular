@@ -1,0 +1,32 @@
+
+<form>
+
+	
+	<div class="container">
+	<h1 style="color:black;text-align:center">Login</h1><br>
+	
+	<div class="form-group">
+	<label for="exampleInputEmail1">Email address</label>
+	<input type="email" class="form-control" id="exampleInputEmail1" name="emailId" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="this.emailId">
+    
+	</div>
+	<div class="form-group">
+    
+	<label for="exampleInputPassword1">Password</label>
+	<input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" [(ngModel)]="this.password">
+	 <a href="#" style="color:white"> forgot password?</a>
+
+	</div>
+	
+	<br>
+  
+	
+	<div class="form-group">	
+	 <button class="btn btn-primary" (click)="getUserByIdPass()" type="button">Submit</button>&nbsp;
+	 <a 
+	 routerLink="/registration"
+	 routerLinkActive="active"
+	 style="color:white"><b>Register Here</b></a></div>
+	</div>
+</form>
+<!--<app-edit [parentData]="userLogin"></app-edit>-->

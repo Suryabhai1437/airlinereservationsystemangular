@@ -1,0 +1,215 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div class="bs" style="background: #474e5d"  >
+    <br>
+    <br> <br> <br> <br>   
+    <div class="card shadow mb-5 bg-white rounded">
+        <!--Card-Body-->
+        <div class="card-body">
+            <!--Card-Title-->
+            <p class="card-title text-center shadow mb-5 rounded">Travel Booking Form</p>
+            
+            
+            <p class="searchText"><strong>Search For Best Flights</strong></p>
+            <!--First Row-->
+            <!--Second Row-->
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="form3" class="active" style="color:black" >First Name</label>
+                    <i class="fas prefix white-text active"></i>
+                    <input type="text" id="form3" class="white-text form-control" placeholder="First Name *" [(ngModel)]="ticket.name.firstName"> </div>
+                <div class="col-sm-6">  <label for="form3" class="active" style="color:black" >Last Name</label>
+                    <i class="fas prefix white-text active"></i>
+                    <input type="text" id="form3" class="white-text form-control" placeholder="Last Name *" [(ngModel)]="ticket.name.lastName"> </div>
+            </div>
+            <!--Third Row-->
+          
+            <!--Fourth Row-->
+            <div class="row mt-4">
+                <div class="col-sm-6">  <label for="form3" class="active" style="color:black" >Address</label>
+                    <i class="fas prefix white-text active"></i>
+                    <input type="text" id="form3" class="white-text form-control" placeholder="Your address *" [(ngModel)]="ticket.address"> </div>
+                <div class="col-sm-6">
+                    <label for="form3" class="active" style="color:black" >Add Date</label>
+                    <i class="fas prefix white-text active"></i>
+                    <input type="Date" id="form3" class="white-text form-control" [(ngModel)]="ticket.bookingDate" placeholder="Your Phone *"> </div>
+            </div>
+            &nbsp;
+            <div class="row">
+                <div class="col-sm-6">  <label for="form3" class="active" style="color:black"  class="form-control">Enter Aadhar No:</label>
+                    <i class="fas  prefix white-text active" id="depart"></i>
+                    <input type="number"  class="white-text form-control" [(ngModel)]="ticket.aadharId" required placeholder="Enter adhar id"></div>
+                    <div class="col-sm-6">
+                        <label for="form3" class="active" style="color:black">Passport Number</label>
+                        <i class="fas prefix white-text active"></i>
+                        <input type="text" id="form3" class="white-text form-control" placeholder="Passport Number" [(ngModel)]="ticket.passportNo"> </div>
+                </div>
+               
+            </div>
+            <div class="form-group">
+                <!--   <input class="form-control" type="number" placeholder="add seat no" [(ngModel)]="ticket.seatNo"/>
+                     <input type="button" class="form-control" placeholder="Seating" (click)="isClick()"  value="seating" />
+                      <div *ngIf="this.click;then thenBlock"></div>
+                          <ng-template #thenBlock>
+                              <app-seating (childEvent)="seatNo=$event"></app-seating>
+                            </ng-template>-->
+                            
+                            <input type="button" class="form-control" placeholder="Seating" (click)="isClick()"  value="seating" />
+                            <div *ngIf="this.click;then thenBlock"></div>
+                            <ng-template #thenBlock>
+                              <div class="conta">
+                                <div class="row"> 
+                                  <div class="column">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label class="radio inline"> 
+                                    <input type="radio" name="gender" value="1" [(ngModel)]="ticket.seatNo">
+                                    <span>1 </span> 
+                                </label>&nbsp;
+                                <label class="radio inline"> 
+                                    <input type="radio" name="gender"   value="2" [(ngModel)]="ticket.seatNo">
+                                    <span>2 </span> &nbsp;
+                                </label>
+                                <label class="radio inline"> 
+                                  <input type="radio" name="gender"   value="3" [(ngModel)]="ticket.seatNo">
+                                  <span>3</span> 
+                              </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <label class="radio inline"> 
+                                <input type="radio" name="gender"   value="4" [(ngModel)]="ticket.seatNo">
+                                <span>4</span>
+                            </label>&nbsp;
+                            <label class="radio inline"> 
+                              <input type="radio" name="gender"   value="5" [(ngModel)]="ticket.seatNo">
+                              <span>5</span> 
+                          </label>&nbsp;
+                          <label class="radio inline"> 
+                            <input type="radio" name="gender"   value="6" [(ngModel)]="ticket.seatNo">
+                            <span>6</span> 
+                        </label>
+                        </div>
+                        </div>
+                        <div class="row"> 
+                          <div class="column">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+                        <label class="radio inline"> 
+                          <input type="radio" name="gender" value="7" [(ngModel)]="WSeat.seatNo">
+                          <span>7</span> 
+                      </label>&nbsp;
+                      <label class="radio inline"> 
+                          <input type="radio" name="gender"   value="8" [(ngModel)]="ticket.seatNo">
+                          <span>8</span> &nbsp;
+                      </label>
+                      <label class="radio inline"> 
+                        <input type="radio" name="gender"   value="9" [(ngModel)]="ticket.seatNo">
+                        <span>9</span> 
+                    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label class="radio inline"> 
+                      <input type="radio" name="gender"   value="10" [(ngModel)]="ticket.seatNo">
+                      <span>10</span>
+                  </label>&nbsp;
+                  <label class="radio inline"> 
+                    <input type="radio" name="gender"   value="11" [(ngModel)]="ticket.seatNo">
+                    <span>11</span> 
+                </label>&nbsp;
+                <label class="radio inline"> 
+                  <input type="radio" name="gender"   value="12" [(ngModel)]="ticket.seatNo">
+                  <span>12</span> 
+              </label>
+                      </div>
+                      </div>   
+                      <div class="row"> 
+                        <div class="column">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      
+                      <label class="radio inline"> 
+                        <input type="radio" name="gender" value="13" [(ngModel)]="WSeat.seatNo">
+                        <span>13</span> 
+                    </label>
+                    <label class="radio inline"> 
+                        <input type="radio" name="gender"   value="14" [(ngModel)]="ticket.seatNo">
+                        <span>14</span>
+                    </label>
+                    <label class="radio inline"> 
+                      <input type="radio" name="gender"   value="15" [(ngModel)]="ticket.seatNo">
+                      <span>15</span> 
+                  </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <label class="radio inline"> 
+                    <input type="radio" name="gender"   value="16" [(ngModel)]="ticket.seatNo">
+                    <span>16</span>
+                </label>&nbsp;
+                <label class="radio inline"> 
+                  <input type="radio" name="gender"   value="17" [(ngModel)]="ticket.seatNo">
+                  <span>17</span> 
+              </label>&nbsp;
+              <label class="radio inline"> 
+                <input type="radio" name="gender"   value="18" [(ngModel)]="ticket.seatNo">
+                <span>18</span> 
+            </label>
+                    </div>
+                    </div>   
+                    <div class="row"> 
+                      <div class="column">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    <label class="radio inline"> 
+                      <input type="radio" name="gender" value="19" [(ngModel)]="WSeat.seatNo">
+                      <span>19</span> 
+                  </label>
+                  <label class="radio inline"> 
+                      <input type="radio" name="gender"   value="20" [(ngModel)]="ticket.seatNo">
+                      <span>20</span> 
+                  </label>
+                  <label class="radio inline"> 
+                    <input type="radio" name="gender"   value="21" [(ngModel)]="ticket.seatNo">
+                    <span>21</span> 
+                </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="radio inline"> 
+                  <input type="radio" name="gender"   value="22" [(ngModel)]="ticket.seatNo">
+                  <span>22</span>
+              </label>&nbsp;
+              <label class="radio inline"> 
+                <input type="radio" name="gender"   value="23" [(ngModel)]="ticket.seatNo">
+                <span>23</span> 
+            </label>&nbsp;
+            <label class="radio inline"> 
+              <input type="radio" name="gender"   value="24" [(ngModel)]="ticket.seatNo">
+              <span>24</span> 
+          </label>
+                  </div>
+                  </div>   
+                          </div>
+                          
+                          </ng-template>
+                  
+              </div>  
+        <br>
+        <div class="form-group">
+                                            
+            <input type="number" id="input-group" placeholder="Add Luggage upto 10 kgs" [(ngModel)]="this.luggage"/>Payment Ammount:{{paymentAmount()}}
+            
+            &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+            <label class="text-black travel">Travel Class</label>
+            &nbsp; <label class="radio inline"> 
+                 <input type="radio" name="travelClass" checked [(ngModel)]="this.travelClass" value="EconomyClass" required>
+                 <span> EconomyClass </span> 
+             </label>&nbsp;
+             <label class="radio inline"> 
+                 <input type="radio" name="travelClass" [(ngModel)]="this.travelClass" value="BusinessClass" required>
+                 <span>BusinessClass </span> 
+             </label>
+         
+        </div>  
+          
+            <!--Fifth Row
+            <div class="row">
+               <a href="#" class="btn btn-primary float-right mt-5" routerLink="/payment"
+               routerLinkActive="active">Proceed</a>
+        </div>-->
+        <div class="form-group">
+            <button type="button" class="btn btn-primary" (click)="ticketBooking()" >Save Details</button>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" routerLink="/payment/{{this.ticket.aadharId}}"
+          routerLinkActive="active" > Proceed</button>
+      </div>
+     
+    </div>
+<br>
+            </div>
